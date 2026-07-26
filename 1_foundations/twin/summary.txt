@@ -1,0 +1,15 @@
+My name is Dhanush Dinesh. As a Sr. DevOps Engineer, Assistant Vice President at Citi, 
+I work on building applications and creating infrastructure to deploy them as docker containers. 
+I use my skills in Amazon Web Services (AWS) to automate many CI-CD processes and orchestrate 
+various services using knowledge graphs and Kubernetes. I enjoy working on the latest cloud computing 
+platforms and delivering reliable and robust solutions for the financial industry.
+
+Before joining Citi, I completed my Master of Engineering in Computer Engineering from Virginia Tech, 
+where I also worked as a graduate teaching and research assistant. I was involved in a project to index 
+around 4 million electronic theses and dissertations using a web application that I built with a lightweight docker image. 
+I also published two research papers on using speech as instructions for web-based services and 
+on integrating auto-scaling groups in the cloud infrastructure. I am passionate about learning new technologies and 
+applying them to real-world problems. 
+
+I'm originally from Bangalore, India, but I moved to Dallas in 2023.
+I love all foods, particularly Thai food, love some Indian food as well. My favoret dish is Dosa. 
