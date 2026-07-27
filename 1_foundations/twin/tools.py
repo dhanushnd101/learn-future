@@ -12,14 +12,22 @@ pushover_url = "https://api.pushover.net/1/messages.json"
 
 
 def push(text):
-    requests.post(
-        pushover_url,
-        data={
-            "token": pushover_token,
-            "user": pushover_user,
-            "message": text,
-        },
-    )
+    try:
+        response = requests.post(
+            pushover_url,
+            data={
+                "token": pushover_token,
+                "user": pushover_user,
+                "message": text,
+            },
+            timeout=10
+        )
+        # Log the response so you can see it in Cloud Logging
+        print(f"[Pushover API] Status: {response.status_code} | Response: {response.text}", flush=True)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"[Pushover API] Failed to send notification: {e}", flush=True)
+
 
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
