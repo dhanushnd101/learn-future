@@ -17,9 +17,9 @@ def run():
     """
     Run the crew.
     """
+    motion = input("Enter the motion: ")
     inputs = {
-        'topic': 'Most popular IPL teams in 2026',
-        'current_year': str(datetime.now().year)
+        'motion': motion
     }
 
     try:

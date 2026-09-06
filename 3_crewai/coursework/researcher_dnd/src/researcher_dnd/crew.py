@@ -19,16 +19,16 @@ class ResearcherDnd():
     # If you would like to add tools to your agents, you can learn more about it here:
     # https://docs.crewai.com/concepts/agents#agent-tools
     @agent
-    def researcher(self) -> Agent:
+    def debater(self) -> Agent:
         return Agent(
-            config=self.agents_config['researcher'], # type: ignore[index]
+            config=self.agents_config['debater'],
             verbose=True
         )
 
     @agent
-    def reporting_analyst(self) -> Agent:
+    def judge(self) -> Agent:
         return Agent(
-            config=self.agents_config['reporting_analyst'], # type: ignore[index]
+            config=self.agents_config['judge'],
             verbose=True
         )
 
@@ -36,16 +36,21 @@ class ResearcherDnd():
     # task dependencies, and task callbacks, check out the documentation:
     # https://docs.crewai.com/concepts/tasks#overview-of-a-task
     @task
-    def research_task(self) -> Task:
+    def propose(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'], # type: ignore[index]
+            config=self.tasks_config['propose'],
         )
 
     @task
-    def reporting_task(self) -> Task:
+    def oppose(self) -> Task:
         return Task(
-            config=self.tasks_config['reporting_task'], # type: ignore[index]
-            output_file='report.md'
+            config=self.tasks_config['oppose'],
+        )
+
+    @task
+    def decide(self) -> Task:
+        return Task(
+            config=self.tasks_config['decide'],
         )
 
     @crew
